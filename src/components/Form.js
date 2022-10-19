@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({ todos, setTodos, setStatus }) => {
   const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
 
   const handleInputText = (e) => {
-    console.log(e.target.value);
     setInputText(e.target.value);
   };
 
@@ -16,6 +14,10 @@ const Form = () => {
       { text: inputText, completed: false, id: Math.random() * 1000 },
     ]);
     setInputText("");
+  };
+
+  const handleStatus = (e) => {
+    setStatus(e.target.value);
   };
   return (
     <section>
@@ -30,7 +32,7 @@ const Form = () => {
           <i className="material-symbols-outlined">add</i>
         </button>
         <article className="select">
-          <select name="todos" className="filter-todo">
+          <select name="todos" className="filter-todo" onChange={handleStatus}>
             <option value="all">All</option>
             <option value="uncompleted">UnCompleted</option>
             <option value="completed">Completed</option>

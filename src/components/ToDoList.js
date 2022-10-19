@@ -1,11 +1,19 @@
 import React from "react";
 import ToDo from "./ToDo";
 
-const ToDoList = () => {
+const ToDoList = ({ todos, setTodos, filteredTodos }) => {
   return (
     <section className="todo-container">
       <article className="todo-list">
-        <ToDo />
+        {filteredTodos.map((todo) => (
+          <ToDo
+            key={todo.id}
+            text={todo.text}
+            todo={todo}
+            todos={todos}
+            setTodos={setTodos}
+          />
+        ))}
       </article>
     </section>
   );
