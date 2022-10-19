@@ -6,3 +6,98 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+body {
+  height: 100vh;
+  background: linear-gradient(236deg, #d3d3d3, #add8e6);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App h1 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: #958e8e;
+  text-decoration: underline;
+}
+
+form {
+  margin-bottom: 1.4em;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 15rem;
+  padding: 1em;
+  margin-right: 1.4em;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+}
+
+.form-btn {
+  padding: 0.6em;
+  margin-right: 0.6em;
+  border: none;
+  color: #fff;
+  background-color: #9b9ad0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.select {
+  padding: 0.4em;
+  border: none;
+  outline: none;
+}
+
+.todo {
+  list-style: none;
+}
+
+.todo-item {
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+
+.todo-item:hover {
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.done-btn {
+  padding: 0.2rem;
+  margin-left: 2.8em;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.done-btn:hover {
+  color: #fff;
+  border-radius: 0.4rem;
+  background-color: #33de1d;
+}
+
+.delete-btn {
+  padding: 0.2em;
+  margin-left: 0.4em;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #fff;
+  border-radius: 0.4rem;
+  background-color: #ff0000;
+}

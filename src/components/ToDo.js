@@ -24,12 +24,12 @@ const ToDo = ({ text, todo, todos, setTodos }) => {
     <ul className="todo">
       <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
         {text}
-        <button className="">
+        <button className="done-btn">
           <i className="material-symbols-outlined" onClick={handleCompleted}>
             check
           </i>
         </button>
-        <button className="" onClick={handleDelete}>
+        <button className="delete-btn" onClick={handleDelete}>
           <i className="material-symbols-outlined">delete</i>
         </button>
       </li>

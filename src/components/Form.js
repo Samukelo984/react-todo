@@ -20,11 +20,12 @@ const Form = ({ todos, setTodos, setStatus }) => {
     setStatus(e.target.value);
   };
   return (
-    <section>
+    <section className="form-container">
       <form onSubmit={handleFormSubmit}>
         <input
-          type="text"
           className="form-input"
+          type="text"
+          placeholder="Add a task..."
           value={inputText}
           onChange={handleInputText}
         />
