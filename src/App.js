@@ -40,6 +40,7 @@ const App = () => {
   useEffect(() => {
     handleFilter();
     saveToLocal();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [todos, status]);
 
   return (
